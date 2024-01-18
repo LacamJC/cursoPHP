@@ -7,12 +7,12 @@
 </head>
 <body>
     <?php 
-        $valor1 = 8;
-        $valor2 = 6;
+        $valor1 = $_GET["valor1"];
+        $valor2 = $_GET["valor2"];
 
     
-        $peso_valor1 = 1 ;
-        $peso_valor2 = 5;
+        $peso_valor1 = $_GET["peso_valor1"] ;
+        $peso_valor2 = $_GET["peso_valor2"];
     
 
         $media_simples = ($valor1 + $valor2) / 2; // valor1 + valo2 / soma dos valores 

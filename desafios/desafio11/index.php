@@ -15,9 +15,10 @@
   </head>
   <body>
     <?php 
-        $valor_inicial = doubleval($_GET["valor"]) ?? 0.00;
-        $aumento = intval($_GET["range"]) ?? 50;
+        $valor_inicial = doubleval($_GET["valor"]) ?? 1;
+        $aumento = intval($_GET["range"]) ?? 1;
 
+        
         $valor_final = $valor_inicial + ($aumento/100) * $valor_inicial;
 
         // var_dump($valor_inicial);
@@ -29,7 +30,7 @@
         <form action="<?=$_SERVER['PHP_SELF']?>" method="GET">
             <div class="mb-3">
                 <label for="valor" class="form-label">Valor do produto (R$)</label>
-                <input type="number" class="form-control" id="valor" step="0.01" name="valor">
+                <input type="number" class="form-control" id="valor" step="0.01" name="valor" value="<?=$valor_inicial?>">
             </div>
             <div class="mb-3">
                 <label for="customRange1" class="form-label">O produto ira aumentar <span id="range"></span>%</label>

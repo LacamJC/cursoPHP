@@ -7,24 +7,40 @@
 </head>
 <body>
     <?php 
-        $segundos =  3600 ; // 60  
         
-        $minutos = $segundos / 60;
-        $horas = $minutos / 60;
-        $dias = $horas / 24;
-        $semanas = $dias / 7;
-
-        $segundos = intval($segundos);
-        $minutos = intval($minutos);        
-        $horas = intval($horas);
-        $dias = intval($dias);
-        $semanas = intval($semanas);        
-
-        echo "$segundos segundos equivalem a $minutos minutos <br>";
-        echo "$minutos minutos equivalem a $horas horas <br>";
-        echo "$horas horas equivalem a $dias dias <br>";
-        echo "$dias dias equivalem a $semanas semanas";
-    
+        $segundos = isset($_GET["segundos"]) ? (int)$_GET["segundos"] : 0; 
+        $sobras = $segundos;   
     ?>
+
+    <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
+        <label for="">Tempo em segundos</label>
+        <input type="number" name="segundos" id="">
+
+        <input type="submit" value="Calcular">
+    </form>
+
+    <p>
+        <?php 
+                    $semanas = (int) ($sobras / 604800);
+                    $sobras = $sobras % 604800;
+            
+                    $dias = (int) ($sobras / 86400);
+                    $sobras = $sobras % 86400;
+            
+                    $horas = (int) ($sobras / 3600);
+                    $sobras = $sobras % 3600;
+            
+                    $minutos = (int) ($sobras / 60);
+                    $sobras = $sobras % 60;
+            
+
+            // echo "<br>Segundos : $segundos";
+            echo "<br>Semanas: $semanas";
+            echo "<br>Dias : $dias";
+            echo "<br>Horas : $horas";
+            echo "<br>Minutos : $minutos";
+
+        ?>
+    </p>
 </body>
 </html>

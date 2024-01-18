@@ -14,14 +14,9 @@
 
         $resultado = $dividendo / $divisor;
         $resto = $dividendo % $divisor
-    ?>
+    ?> 
 
     <form action="<?=$_SERVER['PHP_SELF']?>" method="GET" style="width:300px; margin:150px auto;">
-        <!-- <label for="dividendo">Dividendo</label>
-        <input type="number" name="dividendo" id="dividendo">
-
-        <label for="divisor">Divisor</label>
-        <input type="number" name="divisor" id="divisor"> -->
 
         <input type="number" name="dividendo" id="" style="width: 50px;"> dividido por <input type="number" name="divisor" id="" style="width: 50px;">
 
@@ -29,11 +24,6 @@
     </form>
 
 
-    <!-- <h2>Resultado da divisão</h2>
-    <h3>Dividendo: <?=$dividendo?></h3>
-    <h3>Divisor: <?=$divisor?></h3>
-    <h3>Resultado: <?=$resultado?></h3>
-    <h3>Resto da divisao: <?=$resto?></h3> -->
 
     <h1 class="text-center mb-3">Estrutura da divisão</h1>
     <div class="calculo row m-auto" style="height: 200px;width: 200px;" >

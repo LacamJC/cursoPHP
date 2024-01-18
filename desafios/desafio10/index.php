@@ -15,13 +15,13 @@
 <body>
     <?php 
         $ano_atual = $_GET["ano_atual"] ?? intval(date('Y'));
-        $ano_nascimento = $_GET["ano_nascimento"] ?? 2024;
+        $ano_nascimento = $_GET["ano_nascimento"] ?? 2000;
 
         $idade = $ano_atual - $ano_nascimento;
         // var_dump($ano_atual);
-        echo"$ano_atual\n";
-        echo"$ano_nascimento\n";
-        echo"$idade";
+        // echo"$ano_atual\n";
+        // echo"$ano_nascimento\n";
+        // echo"$idade";
 
     ?>
 
@@ -29,7 +29,7 @@
         <p>Insira sua data de nascimento levando em consideração que estamos em <strong><?=date('Y')?></strong></p>
         <br>
         <label for="nascimento">Em que ano você nasceu</label>
-        <input type="number" name="ano_nascimento" id="nascimento">
+        <input type="number" name="ano_nascimento" id="nascimento" max="<?=$ano_atual?>" value="<?=$ano_nascimento?>">
         <br>
         <label for="idade">Qual idade você vai ter em</label>
         <input type="number" name="ano_atual" id="" value="<?=$ano_atual?>">
