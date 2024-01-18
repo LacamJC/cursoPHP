@@ -11,15 +11,20 @@
     <form class="container w-25 mt-5 m-auto" action="cad.php" method="get" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome">
+            <input type="text" class="form-control" id="nome" name="nome" autocomplete="off">
 
         </div>
 
         <div class="mb-3">
             <label for="sobrenome" class="form-label">Sobrenome</label>
-            <input type="text" class="form-control" id="text">
+            <input type="text" class="form-control" id="text" name="sobrenome" autocomplete="off">
         </div>
-        
+
+        <div class="mb-3">
+            <label for="apelido" class="form-label">Apelido</label>
+            <input type="text" name="apelido" id="apelido" class="form-control">
+        </div>
+
         <input type="submit" value="Enviar" class="btn btn-primary">
     </form>
 
